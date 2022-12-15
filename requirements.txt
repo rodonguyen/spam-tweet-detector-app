@@ -4,7 +4,6 @@ aiohttp==3.8.1
 aiosignal==1.2.0
 alabaster==0.7.12
 altair==4.1.0
-anaconda-client==1.9.0
 anaconda-navigator==2.1.4
 anaconda-project==0.10.2
 anyio==3.5.0
@@ -142,15 +141,6 @@ jmespath==0.10.0
 joblib==1.1.0
 json5==0.9.6
 jsonschema==4.4.0
-jupyter==1.0.0
-jupyter-client==6.1.12
-jupyter-console==6.4.0
-jupyter-core==4.9.2
-jupyter-server==1.13.5
-jupyterlab==3.3.2
-jupyterlab-pygments==0.1.2
-jupyterlab-server==2.10.3
-jupyterlab-widgets==1.0.0
 keras==2.9.0
 Keras-Preprocessing==1.1.2
 keyring==23.4.0
