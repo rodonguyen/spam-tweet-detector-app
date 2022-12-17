@@ -21,7 +21,7 @@ def load_LSTM_model():
   lstm_model_2input = keras.models.Model([inputA, inputB], output)
 
   lstm_model_2input.compile(optimizer='adam', loss='binary_crossentropy', metrics=['accuracy'])
-  lstm_model_2input.load_weights("pickles/LSTM_model_2inputs_969.h5")
+  lstm_model_2input.load_weights("pickle_files/LSTM_model_2inputs_969.h5")
 
   return lstm_model_2input
 
@@ -29,7 +29,9 @@ def load_LSTM_model():
 def preprocessing_input(input):
   columns_to_be_standardised = ['following', 'followers', 'actions']
   input_df = pandas.DataFrame(data=input, columns=['Tweet', 'following', 'followers', 'actions', 'is_retweet'])
-  sigma, mu, tokenizer = utils.load_pickle('pickles/LSTM_sigma_train.pkl'), utils.load_pickle('pickles/LSTM_mu_train.pkl'), utils.load_pickle('pickles/LSTM_tokeniser_train.pkl')
+  sigma, mu, tokenizer = utils.load_pickle('pickle_files/LSTM_sigma_train.pkl'), \
+                        utils.load_pickle('pickle_files/LSTM_mu_train.pkl'), \
+                        utils.load_pickle('pickle_files/LSTM_tokeniser_train.pkl')
   # print(sigma, mu)
   
   # PROCESS 'tweet'

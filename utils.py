@@ -1,7 +1,7 @@
 import pickle
 import re
 from tensorflow import keras 
-import numpy, sklearn
+import numpy
 
 def load_pickle(filename):
     with open(f"{filename}", "rb") as f:

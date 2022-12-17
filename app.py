@@ -1,17 +1,17 @@
 import streamlit as st
 import utils_lstm, utils_naive_bayes, pandas
 
-
-
 model = 0
 
 st.title('Is it a spam tweet? 🤖')
 
-tweet_content = st.text_input("Tweet Content", 'Big day.  #WeTheNorth #yyz #thesix #sunset #skyline @ The Six https://www.instagram.com/p/BFgrA9gBZay/') 
-following = st.number_input("Input Following Number of the author account", 0,10000000, 4743)
-followers = st.number_input("Input Followers Number", 0,10000000, 366142)
-actions = st.number_input("Input Actions Number", 0,1000000, 7232)
-is_retweet = st.selectbox("Is it a Retweet",[0,1], 0)
+st.text('Note: the numbers placed in advance are mean values and \ndo not affect the final prediction.')
+# tweet_content = st.text_input("Tweet Content", 'Big day.  #WeTheNorth #yyz #thesix #sunset #skyline @ The Six https://www.instagram.com/p/BFgrA9gBZay/') 
+tweet_content = st.text_input("Input Tweet Content. \n Below is a Spam example:", 'Win now! Collect cash prize of 1000$ by joining this lucky draw: https://rodonguyen-spam-tweet-detector-app-app-ixl0vb.streamlit.app/') 
+following = st.number_input("Input Following number of the author account", 0,10000000, 4743)
+followers = st.number_input("Input Followers number of the author account", 0,10000000, 366142)
+actions = st.number_input("Input Actions number - The total number of favourites, replies, and retweets associated with the tweet.", 0,1000000, 7232)
+is_retweet = st.selectbox("Is it a Retweet?",[0,1], 0)
 
 def predict():
 
