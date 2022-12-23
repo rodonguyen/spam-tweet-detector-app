@@ -17,8 +17,9 @@ st.markdown('''Note: the numbers placed in advance are *mean* values and \ndo no
 Here are some sample tweets:
 - Quality:  Big day.  #OLYMPIC #australia #skyline @ The Six https://www.instagram.com/p/BFgrA9gBZay/
 - Spam:  Win now! Collect cash prize of 1000$ by joining this lucky draw: https://rodonguyen-spam-tweet-detector-app-app-ixl0vb.streamlit.app/'
-- Quality:  I posted a new photo to Facebook http://fb.me/2Be7LiyuJ'
-- Spam:  Merkel Wants to Use Failed Iran Deal as Model to Solve North Korea Problem https://t.co/DAkGReM4js''')
+- Quality:  I posted a new photo to Facebook http://fb.me/2Be7LiyuJ'  
+- Spam:  Merkel Wants to Use Failed Iran Deal as Model to Solve North Korea Problem https://t.co/DAkGReM4js  
+- Quality: I'm not a spam tweet because I don't carry harmful content''')
 
 tweet_content = st.text_input("Input Tweet Content. \n Below is a Spam example:", 'Win now! Collect cash prize of 1000$ by joining this lucky draw: https://rodonguyen-spam-tweet-detector-app-app-ixl0vb.streamlit.app/') 
 
