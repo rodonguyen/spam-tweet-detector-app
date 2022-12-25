@@ -21,7 +21,7 @@ Here are some sample tweets:
 - Spam:  Merkel Wants to Use Failed Iran Deal as Model to Solve North Korea Problem https://t.co/DAkGReM4js  
 - Quality: I'm not a spam tweet because I don't carry harmful content''')
 
-tweet_content = st.text_input("Input Tweet Content. **Please press Enter so the app can update the input properly.** Below is a Spam example:", 'Win now! Collect cash prize of 1000$ by joining this lucky draw: https://rodonguyen-spam-tweet-detector-app-app-ixl0vb.streamlit.app/') 
+tweet_content = st.text_input("Input Tweet Content. **Please press Enter after editting so the app can update the input properly.** Below is a Spam example:", 'Win now! Collect cash prize of 1000$ by joining this lucky draw: https://rodonguyen-spam-tweet-detector-app-app-ixl0vb.streamlit.app/') 
 
 following = st.number_input("Input Following number of the author account", 0,10000000, 4743)
 followers = st.number_input("Input Followers number of the author account", 0,10000000, 366142)
