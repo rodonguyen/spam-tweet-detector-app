@@ -15,13 +15,13 @@ Author: [Rodo Nguyen](https://rodonguyen.dev/)''')
 st.header('Instructions:')
 st.markdown('''Note: the numbers placed in advance are *mean* values and \ndo not affect the final prediction.
 Here are some sample tweets:
-- Quality:  Big day.  #OLYMPIC #australia #skyline @ The Six https://www.instagram.com/p/BFgrA9gBZay/
-- Spam:  Win now! Collect cash prize of 1000$ by joining this lucky draw: https://rodonguyen-spam-tweet-detector-app-app-ixl0vb.streamlit.app/'
-- Quality:  I posted a new photo to Facebook http://fb.me/2Be7LiyuJ'  
+- Quality:  Big day.  #OLYMPIC #australia #skyline @ The Six https://www.instagram.com/p/BFgrA9gBZay/  
+- Spam:  Win now! Collect cash prize of 1000$ by joining this lucky draw: https://rodonguyen-spam-tweet-detector-app-app-ixl0vb.streamlit.app/  
+- Quality:  I posted a new photo to Facebook http://fb.me/2Be7LiyuJ  
 - Spam:  Merkel Wants to Use Failed Iran Deal as Model to Solve North Korea Problem https://t.co/DAkGReM4js  
 - Quality: I'm not a spam tweet because I don't carry harmful content''')
 
-tweet_content = st.text_input("Input Tweet Content. \n Below is a Spam example:", 'Win now! Collect cash prize of 1000$ by joining this lucky draw: https://rodonguyen-spam-tweet-detector-app-app-ixl0vb.streamlit.app/') 
+tweet_content = st.text_input("Input Tweet Content. **Please press Enter so the app can update the input properly.** Below is a Spam example:", 'Win now! Collect cash prize of 1000$ by joining this lucky draw: https://rodonguyen-spam-tweet-detector-app-app-ixl0vb.streamlit.app/') 
 
 following = st.number_input("Input Following number of the author account", 0,10000000, 4743)
 followers = st.number_input("Input Followers number of the author account", 0,10000000, 366142)
@@ -46,7 +46,10 @@ def predict():
     ], 
     columns=['model', 'prediction'])
 
+  print('\n\n\n')
+  print('=====\ntweet_content:', tweet_content)
   print(prediction)
+  print('\n\n\n')
 
   if prediction.loc[0,'prediction'] == True: 
     st.error('LSTM Model Prediction: It\'s a Spam Tweet 🤖')
